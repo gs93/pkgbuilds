@@ -11,8 +11,8 @@ depends=('bash' 'findutils' 'tar' 'systemd')
 makedepends=()
 source=($_pkgname.install)
 install=$_pkgname.install
-sha512sums=('006bd872f5ccdd9718074e5100be60d3d136672576b19ded7bb81eb75fe806b806cb160d0cc3d55fd6276f8a41b24fa676288f68660716063c9db69bbc79b19c')
-md5sums=('300e0c73d829001d3de767a2386f56e7')
+md5sums=('1a95c99da95f6ef360020a052ea651d6')
+sha512sums=('a9c216f1866d912dcd6a622f9b22bd45b20968fdb72cc64fe1f0184e95fba36ab3152103f12d66c6b047599bd4ec26b3a6a51ed58eb1da1322f28223f625ad1c')
 
 _gitroot="https://github.com/gs93/$_pkgname.git"
 _gitname=$_pkgname
