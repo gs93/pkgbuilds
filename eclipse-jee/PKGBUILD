@@ -38,17 +38,17 @@ build() {
 package() {
 	local _icon_path=/usr/share/eclipse/plugins/org.eclipse.platform_${pkgver}.v${_eclipse_timestamp}
 
-	install -m755 -d $pkgdir/usr/{bin,share/applications}
-	install -m755 -d $pkgdir/usr/share/icons/hicolor/{16x16,32x32,48x48,256x256,scalable}/apps
+	install -m755 -d "$pkgdir"/usr/{bin,share/applications}
+	install -m755 -d "$pkgdir"/usr/share/icons/hicolor/{16x16,32x32,48x48,256x256,scalable}/apps
 
-	cd $srcdir
+	cd "$srcdir"
 
-	mv eclipse $pkgdir/usr/share
-	install -D -m 755 eclipse.sh $pkgdir/usr/bin/eclipse
-	install -D -m 644 eclipse.desktop $pkgdir/usr/share/applications
-	install -D -m 644 eclipse.svg $pkgdir/usr/share/icons/hicolor/scalable/apps/eclipse.svg
-	ln -s ${_icon_path}/eclipse16.png ${pkgdir}/usr/share/icons/hicolor/16x16/apps/eclipse.png
-	ln -s ${_icon_path}/eclipse32.png ${pkgdir}/usr/share/icons/hicolor/32x32/apps/eclipse.png
-	ln -s ${_icon_path}/eclipse48.png ${pkgdir}/usr/share/icons/hicolor/48x48/apps/eclipse.png
-	ln -s ${_icon_path}/eclipse256.png ${pkgdir}/usr/share/icons/hicolor/256x256/apps/eclipse.png
+	mv eclipse "$pkgdir/usr/share"
+	install -D -m 755 eclipse.sh "$pkgdir/usr/bin/eclipse"
+	install -D -m 644 eclipse.desktop "$pkgdir/usr/share/applications"
+	install -D -m 644 eclipse.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/eclipse.svg"
+	ln -s ${_icon_path}/eclipse16.png "$pkgdir/usr/share/icons/hicolor/16x16/apps/eclipse.png"
+	ln -s ${_icon_path}/eclipse32.png "$pkgdir/usr/share/icons/hicolor/32x32/apps/eclipse.png"
+	ln -s ${_icon_path}/eclipse48.png "$pkgdir/usr/share/icons/hicolor/48x48/apps/eclipse.png"
+	ln -s ${_icon_path}/eclipse256.png "$pkgdir/usr/share/icons/hicolor/256x256/apps/eclipse.png"
 }
