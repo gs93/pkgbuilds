@@ -32,7 +32,7 @@ md5sums=('00598e0866353f7a7b1a5ed65dc01610'
 PKGEXT=".pkg.tar"
 
 build() {
-	cd $srcdir
+	cd "$srcdir"
 
 	patch -p1 < eclipse.ini.patch
 }
