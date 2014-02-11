@@ -3,8 +3,8 @@
 # Contributor: K?vin Guilloy <kevin@guilloy.ath.cx>
 
 pkgname=qtcreator-src
-_pkgver=2.8
-pkgver=${_pkgver}.0
+_pkgver=3.0
+pkgver=${_pkgver}.1
 pkgrel=1
 pkgdesc="Source code of QtCreator IDE needed to build plugins"
 arch=('any')
@@ -13,14 +13,14 @@ license=('LGPL')
 depends=()
 options=('!strip')
 makedepends=()
-source=("http://download.qt-project.org/official_releases/qtcreator/${_pkgver}/${pkgver}/qt-creator-${pkgver}-src.tar.gz")
-md5sums=('5aacdad4491b7dda9758a81384d8da79')
-sha512sums=('bc5ee815e445a3da3f0777ed75c259915220964ce9a0bf3f94ea80795dbb812384c587f31e1c554726d491f9a74c0ac719a497291afb2808a1f45852ef1b6ea0')
+source=("http://download.qt-project.org/official_releases/qtcreator/${_pkgver}/${pkgver}/qt-creator-opensource-src-${pkgver}.tar.gz")
+md5sums=('1d736f4b3c25c25cf070c400a92e50c4')
+sha512sums=('fa8b2c4196136b310127daf308a5a99b0ef39b2e25db83930f959a034418a08590edbe8e19e6afea02c1d647602bb49c96df8db156d24f6b9b9246c1a93ead19')
 
 PKGEXT='.pkg.tar'
 
 package () {
     cd "${srcdir}"
     mkdir -p "$pkgdir/usr/src/"
-    cp -r "qt-creator-${pkgver}-src" "$pkgdir/usr/src/qtcreator"
+    cp -r "qt-creator-opensource-src-${pkgver}" "$pkgdir/usr/src/qtcreator"
 }
